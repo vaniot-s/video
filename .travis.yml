@@ -6,7 +6,7 @@ go:
 sudo: required
 
 install:
-    - echo "install"
+  - echo "install"
 
-  script:
-    - echo "script"
+script:
+  - echo "script"
