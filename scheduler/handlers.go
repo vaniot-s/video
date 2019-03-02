@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/julienschmidt/httprouter"
-	"go-note/mooc/video/scheduler/dbops"
+	"video/scheduler/dbops"
 	"net/http"
 )
 

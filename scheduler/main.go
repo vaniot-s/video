@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/julienschmidt/httprouter"
-	"go-note/mooc/video/scheduler/taskrunner"
+	"video/scheduler/taskrunner"
 	"net/http"
 )
 

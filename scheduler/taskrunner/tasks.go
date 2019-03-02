@@ -2,7 +2,7 @@ package taskrunner
 
 import (
 	"errors"
-	"go-note/mooc/video/scheduler/dbops"
+	"video/scheduler/dbops"
 	"log"
 	"os"
 	"sync"

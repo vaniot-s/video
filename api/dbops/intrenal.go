@@ -2,7 +2,7 @@ package dbops
 
 import (
 	"database/sql"
-	"go-note/mooc/video/api/defs"
+	"video/api/defs"
 	"log"
 	"strconv"
 	"sync"

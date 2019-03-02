@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"go-note/mooc/video/api/defs"
+	"video/api/defs"
 	"io"
 	"net/http"
 )

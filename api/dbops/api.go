@@ -3,8 +3,8 @@ package dbops
 import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
-	"go-note/mooc/video/api/defs"
-	"go-note/mooc/video/api/utils"
+	"video/api/defs"
+	"video/api/utils"
 	"log"
 	"time"
 )

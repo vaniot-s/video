@@ -1,8 +1,8 @@
 package main
 
 import (
-	"go-note/mooc/video/api/defs"
-	"go-note/mooc/video/api/session"
+	"video/api/defs"
+	"video/api/session"
 	"net/http"
 )
 

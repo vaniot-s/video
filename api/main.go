@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/julienschmidt/httprouter"
-	"go-note/mooc/video/api/session"
+	"video/api/session"
 	"net/http"
 )
 

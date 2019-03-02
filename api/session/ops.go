@@ -1,9 +1,9 @@
 package session
 
 import (
-	"go-note/mooc/video/api/dbops"
-	"go-note/mooc/video/api/defs"
-	"go-note/mooc/video/api/utils"
+	"video/api/dbops"
+	"video/api/defs"
+	"video/api/utils"
 	"sync"
 	"time"
 )
