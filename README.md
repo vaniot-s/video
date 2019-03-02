@@ -1,5 +1,7 @@
 >[video](https://coding.imooc.com/lesson/227.html)
 
+[![Build Status](https://travis-ci.com/vaniot-s/video.svg?branch=master)](https://travis-ci.com/vaniot-s/video)
+
 命令
 ---
 build
