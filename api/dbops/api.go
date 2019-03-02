@@ -3,10 +3,10 @@ package dbops
 import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
-	"video/api/defs"
-	"video/api/utils"
 	"log"
 	"time"
+	"video/api/defs"
+	"video/api/utils"
 )
 
 //创建用户

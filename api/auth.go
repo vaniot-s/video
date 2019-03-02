@@ -1,9 +1,9 @@
 package main
 
 import (
+	"net/http"
 	"video/api/defs"
 	"video/api/session"
-	"net/http"
 )
 
 var HEADER_FIELD_SESSION = "X-Session-Id"

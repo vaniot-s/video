@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/julienschmidt/httprouter"
-	"video/scheduler/dbops"
 	"net/http"
+	"video/scheduler/dbops"
 )
 
 //handler

@@ -2,9 +2,9 @@ package main
 
 import (
 	"encoding/json"
-	"video/api/defs"
 	"io"
 	"net/http"
+	"video/api/defs"
 )
 
 //返回错误信息

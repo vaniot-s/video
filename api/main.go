@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/julienschmidt/httprouter"
-	"video/api/session"
 	"net/http"
+	"video/api/session"
 )
 
 type middleWareHandler struct {

@@ -32,7 +32,7 @@ func streamHandler(w http.ResponseWriter, r *http.Request, p httprouter.Params) 
 	defer video.Close()
 	/************aliyun oss**********/
 	//targetUrl:="https://vaniot.oss-cn-beijing.aliyuncs.com/videos/"+p.ByName("vid-id")
-    //http.Redirect(w,r,targetUrl,301)
+	//http.Redirect(w,r,targetUrl,301)
 }
 
 //上传video

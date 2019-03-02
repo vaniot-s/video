@@ -3,14 +3,14 @@ package main
 import (
 	"encoding/json"
 	"github.com/julienschmidt/httprouter"
-	"video/api/dbops"
-	"video/api/defs"
-	"video/api/session"
-	"video/api/utils"
 	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"video/api/dbops"
+	"video/api/defs"
+	"video/api/session"
+	"video/api/utils"
 )
 
 //Create handler

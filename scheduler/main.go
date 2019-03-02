@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/julienschmidt/httprouter"
-	"video/scheduler/taskrunner"
 	"net/http"
+	"video/scheduler/taskrunner"
 )
 
 func RegisterHandlers() *httprouter.Router {

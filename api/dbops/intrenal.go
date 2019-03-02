@@ -2,10 +2,10 @@ package dbops
 
 import (
 	"database/sql"
-	"video/api/defs"
 	"log"
 	"strconv"
 	"sync"
+	"video/api/defs"
 )
 
 func InsertSession(sid string, ttl int64, uname string) error {

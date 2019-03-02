@@ -2,10 +2,10 @@ package taskrunner
 
 import (
 	"errors"
-	"video/scheduler/dbops"
 	"log"
 	"os"
 	"sync"
+	"video/scheduler/dbops"
 )
 
 //删除文件

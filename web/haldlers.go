@@ -62,7 +62,7 @@ func userHomeHandler(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 	} else if len(fname) != 0 {
 		p = &UserPage{Name: fname}
 	}
- //io.WriteString(w,"eee")
+	//io.WriteString(w,"eee")
 	t, e := template.ParseFiles("./templates/userhome.html")
 	if e != nil {
 		log.Printf("Parsing userhome.html error: %s", e)

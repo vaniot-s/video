@@ -1,11 +1,11 @@
 package session
 
 import (
+	"sync"
+	"time"
 	"video/api/dbops"
 	"video/api/defs"
 	"video/api/utils"
-	"sync"
-	"time"
 )
 
 var sessionMap *sync.Map
@@ -43,7 +43,7 @@ func GenerateNewSessionId(un string) string {
 	ttl := ct + 30*60*1000 // Severside session valid time: 30 min
 
 	ss := &defs.SimpleSession{Username: un, TTL: ttl}
-	sessionMap.Store(id, ss) //映射到sessionmap
+	sessionMap.Store(id, ss)         //映射到sessionmap
 	dbops.InsertSession(id, ttl, un) //写入到数据库
 
 	return id
