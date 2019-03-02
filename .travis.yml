@@ -17,4 +17,8 @@ install:
   - echo "install"
 
 script:
-  - echo "script"
+  - go test ./api/dbops
+  - go test ./scheduler/taskrunner
+
+after_success:
+  - echo "success"
