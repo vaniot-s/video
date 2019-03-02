@@ -17,7 +17,7 @@ install:
   - echo "install"
 
 script:
-  - go test ./..
+  -go test -race -coverprofile=coverage.txt -covermode=atomic -v ./...
 
 
 after_success:
