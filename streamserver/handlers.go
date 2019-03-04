@@ -7,8 +7,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
-	"time"
 )
 
 func testPageHandler(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
@@ -19,20 +17,24 @@ func testPageHandler(w http.ResponseWriter, r *http.Request, p httprouter.Params
 
 func streamHandler(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	/*********************local*******************/
-	vid := p.ByName("vid-id")
-	vl := VIDEO_DIR + vid
-
-	video, err := os.Open(vl)
-	if err != nil {
-		sendErrorResponse(w, http.StatusInternalServerError, "Internal Error")
-		return
-	}
-	w.Header().Set("Content-Type", "video/mp4")
-	http.ServeContent(w, r, "", time.Now(), video)
-	defer video.Close()
+	//vid := p.ByName("vid-id")
+	//vl := VIDEO_DIR + vid
+	//
+	//video, err := os.Open(vl)
+	//if err != nil {
+	//	sendErrorResponse(w, http.StatusInternalServerError, "Internal Error")
+	//	return
+	//}
+	//w.Header().Set("Content-Type", "video/mp4")
+	//http.ServeContent(w, r, "", time.Now(), video)
+	//defer video.Close()
 	/************aliyun oss**********/
 	//targetUrl:="https://vaniot.oss-cn-beijing.aliyuncs.com/videos/"+p.ByName("vid-id")
 	//http.Redirect(w,r,targetUrl,301)
+	/************qiniu oss***********/
+	//http://pnq0o42mg.bkt.clouddn.com/0843795f-cae2-472b-a136-fcacc23ba24c
+	targetUrl := "http://pnq0o42mg.bkt.clouddn.com/" + p.ByName("vid-id")
+	http.Redirect(w, r, targetUrl, 301)
 }
 
 //上传video
