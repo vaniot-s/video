@@ -4,7 +4,7 @@
 cp -R ./templates ./bin/
 
 #videos暂存文件
-if [ ! -d "/bin/videos" ]; then
+if [ ! -d "./bin/videos" ]; then
 mkdir ./bin/videos
 fi
 
