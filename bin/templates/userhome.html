@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/statics/scripts/user.js"></script>
+    <link href="/statics/css/DPlayer.min.css"  rel="stylesheet" >
+    <link href="/statics/css/user.css"  rel="stylesheet" >
+</head>
+<body id="main-back">
+
+<div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">{{.Name}}</a>
+    <a href="#about">About</a>
+    <a href="#" id="upload" data-rel="popup">Upload</a>
+    <a href="" id="logout" href="/">Logout</a>
+</div>
+
+
+<div class="whole">
+    <div id="play-box" >
+        <div id="dplayer"  id="curr-video" ></div>
+        <script src="/statics/scripts/DPlayer.min.js"></script>
+        <div id="curr-video-name"></div>
+        <div id="curr-video-ctime"></div>
+
+        <div id="snackbar">Comment submission succeeded</div>
+        <div id="errorbar">Error happened</div>
+
+        <form id="comments">
+            <textarea id="comments-input" name="message"   rows="5" placeholder="Input your comment"></textarea>
+            <br>
+            <input id="submit-comment" type="submit">
+            <hr size="1" style="border-color: #EDE3E1; margin-top:40px;">
+            <div id="comments-total">0 Comments</div>
+            <div id="comments-history">
+            </div>
+        </form>
+    </div>
+
+    <div id="items" class="video-thumbnail-list">
+        <header>播放列表</header>
+    </div>
+</div>
+
+<!--上传--->
+<div id="uploadvideomodal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Modal Header</h2>
+        </div>
+        <form class="modal-body">
+            <div id="uploadform"  enctype="multipart/form-data" class="uploadForm">
+                <input class="uploadForm__input" type="file" name="file" id="inputFile" accept="video/*">
+                <label for="video_name">标题: <input type="text" id="vname" name="video name"></label>
+                <input type="submit" id="upload-submit" name="submit" value="Submit">
+            </div>
+        </form>
+        <div class="modal-footer">
+            <h3>&coprity by vaniot</h3>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
