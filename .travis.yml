@@ -5,6 +5,7 @@ go:
   - 1.9
 #环境变量
 env:
+  - GO19VENDOREXPERIMENT=1
 #  - "PATH=/home/travis/gopath/bin:$PATH"
   - export GOPATH=$HOME/gopath
   - export PATH=$HOME/gopath/bin:$PATH
