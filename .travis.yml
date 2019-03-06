@@ -1,18 +1,20 @@
 language: go
 
+os:
+  - linux
 #版本
 go:
   - 1.9
 #环境变量
 env:
-  - GO19VENDOREXPERIMENT=1
+
 #  - "PATH=/home/travis/gopath/bin:$PATH"
-  - export GOPATH=$HOME/gopath
-  - export PATH=$HOME/gopath/bin:$PATH
-  - mkdir -p $HOME/gopath/src/github.com/vaniot-s/video
-  - rsync -az ${TRAVIS_BUILD_DIR}/ $HOME/gopath/src/github.com/vaniot-s/video/
-  - export TRAVIS_BUILD_DIR=$HOME/gopath/src/github.com/vaniot-s/video
-  - cd $HOME/gopath/src/github.com/vaniot-s/video
+#  - export GOPATH=$HOME/gopath
+#  - export PATH=$HOME/gopath/bin:$PATH
+#  - mkdir -p $HOME/gopath/src/github.com/vaniot-s/video
+#  - rsync -az ${TRAVIS_BUILD_DIR}/ $HOME/gopath/src/github.com/vaniot-s/video/
+#  - export TRAVIS_BUILD_DIR=$HOME/gopath/src/github.com/vaniot-s/video
+#  - cd $HOME/gopath/src/github.com/vaniot-s/video
 sudo: required
 
 #安装
@@ -23,6 +25,7 @@ install:
   - echo "install"
 
 script:
+  GO111MODULE=on go test -v -coverprofile=coverage.txt -covermode=atomic $(go list ./...)
 #  - go test -race -coverprofile=coverage.txt -covermode=atomic -v ./...
 
 
