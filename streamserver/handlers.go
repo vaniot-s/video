@@ -33,7 +33,7 @@ func streamHandler(w http.ResponseWriter, r *http.Request, p httprouter.Params) 
 	//http.Redirect(w,r,targetUrl,301)
 	/************qiniu oss***********/
 	//http://pnq0o42mg.bkt.clouddn.com/0843795f-cae2-472b-a136-fcacc23ba24c
-	targetUrl := "http://pnq0o42mg.bkt.clouddn.com/" + p.ByName("vid-id")
+	targetUrl := "http://pq5cmm2db.bkt.clouddn.com/" + p.ByName("vid-id")
 	http.Redirect(w, r, targetUrl, 301)
 }
 

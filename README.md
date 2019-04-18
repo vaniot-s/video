@@ -122,6 +122,7 @@ video
 |  |__session #会话信息
 |  |   |__ops.go #生成session
 |  |__auth.go #身份校验
+|
 |__streamserver #视频播放模块 上传/播放
 |  |__main.go #入口函数
 |  |__halders.go # 处理逻辑
