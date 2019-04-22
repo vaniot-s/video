@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-DBHOST="127.0.0.1"
+DBHOST=""
 DRIVERNAME="mysql"
-USERNAME="root"
-PASSWORD="root"
-PORT="3307"
-DATABASE="video"
-OSSURL="http://pq5cmm2db.bkt.clouddn.com/"
+USERNAME=""
+PASSWORD=""
+PORT=""
+DATABASE=""
+OSSURL=""
 echo "设置数据类型"
 if [ -n $DRIVERNAME ]
 then
