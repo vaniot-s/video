@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c7103c-20d8-4635-9109-dacedd9eda07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/env.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/dbops/conn.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/dbops/conn.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/api" beforeDir="false" afterPath="$PROJECT_DIR$/bin/api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nohup.out" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nohup.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/streamserver" beforeDir="false" afterPath="$PROJECT_DIR$/bin/streamserver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/streamserver/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/streamserver/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env.sh" beforeDir="false" afterPath="$PROJECT_DIR$/env.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_ui/templates/DPlayer" beforeDir="false" afterPath="$PROJECT_DIR$/web_ui/templates/DPlayer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_ui/templates/DPlayer/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_ui/web" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,8 +161,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/env.sh">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+                <state relative-caret-position="60">
+                  <caret line="4" column="14" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -743,8 +735,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/env.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>

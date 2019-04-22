@@ -2,11 +2,11 @@
 
 DBHOST="127.0.0.1"
 DRIVERNAME="mysql"
-USERNAME=""
-PASSWORD=""
-PORT=""
-DATABASE=""
-OSSURL=""
+USERNAME="root"
+PASSWORD="root"
+PORT="3307"
+DATABASE="video"
+OSSURL="http://pq5cmm2db.bkt.clouddn.com/"
 echo "设置数据类型"
 if [ -n $DRIVERNAME ]
 then
