@@ -1,62 +1,3 @@
-
-## docker-mysql
-
-docker下拉区mysql8.0镜像
-
-```shell
-docker pull daocloud.io/library/mysql:latest
-```
-
-创建container参数说明
-
-```shell
-docker run -d  -p 3306:3306 \
---rm --name mysql \ ## 测试时使用 --rm 正式使用 --restart=always 自动重启
-–privileged=true \ # 提升容器内权限,错误日权限
-###环境变量##
--e MYSQL_ROOT_PASSWORD=root \ #环境变量用户密码
--e LANG=C.UTF-8 \ #支持中文
--e MYSQL_USER=vaniot \ #创建用户
--e MYSQL_PASSWORD=123456 \ #设置密码
--e MYSQL_DATABASE=test \ #创建数据库
--e MYSQL_ROOT_HOST=% \
-##文件挂载必须是目录##
--v /usr/local/src/mysql/data:/var/lib/mysql \ #mysql 文件目录
--v /usr/local/src/mysql/conf:/etc/mysql \ #配置文件目录
-daocloud.io/library/mysql:latest \
---character-set-server=utf8 \
---collation-server=utf8_general_ci
-```
-
-可执行的命令:
-
-```shell
-docker run -d  -p 3306:3306 \
---restart=always --name mysql \
--e MYSQL_ROOT_PASSWORD=password \
--e LANG=C.UTF-8 \
--v /home/vaniot/dev/dockerdata/mysql/data:/var/lib/mysql \
--v /home/vaniot/dev/dockerdata/mysql/conf:/etc/mysql/ \
-daocloud.io/library/mysql:8.0\
---character-set-server=utf8  \
---collation-server=utf8_general_ci
-```
-
-docker run -d  -p 3307:3306 \
---restart=always --name mysqls \
--e MYSQL_ROOT_PASSWORD=password \
--e LANG=C.UTF-8 \
-mysql \
---character-set-server=utf8  \
---collation-server=utf8_general_ci
-
-
-### 数据库备份
-
-```shell
- docker exec mysql sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' > /data/mysql/all-databases.sql
-```
-
 文件目录
 ---
 
@@ -139,7 +80,68 @@ video
 
 
 ## 运行
+### docker-mysql
+docker下拉区mysql8.0镜像
+
+```shell
+docker pull daocloud.io/library/mysql:latest
+```
+
+创建container参数说明
+
+```shell
+docker run -d  -p 3306:3306 \
+--rm --name mysql \ ## 测试时使用 --rm 正式使用 --restart=always 自动重启
+–privileged=true \ # 提升容器内权限,错误日权限
+###环境变量##
+-e MYSQL_ROOT_PASSWORD=passsword \ #环境变量用户密码
+-e LANG=C.UTF-8 \ #支持中文
+-e MYSQL_USER=vaniot \ #创建用户
+-e MYSQL_PASSWORD=123456 \ #设置密码
+-e MYSQL_DATABASE=test \ #创建数据库
+-e MYSQL_ROOT_HOST=% \
+##文件挂载必须是目录##
+-v /usr/local/src/mysql/data:/var/lib/mysql \ #mysql 文件目录
+-v /usr/local/src/mysql/conf:/etc/mysql \ #配置文件目录
+daocloud.io/library/mysql:latest \
+--character-set-server=utf8 \
+--collation-server=utf8_general_ci
+```
+可执行的命令:
+```shell
+docker run -d  -p 3306:3306 \
+--restart=always --name mysqls \
+-e MYSQL_ROOT_PASSWORD=password \
+-e LANG=C.UTF-8 \
+mysql \
+--character-set-server=utf8  \
+--collation-server=utf8_general_ci
+```
+
+#### 数据库备份
+
+```shell
+ docker exec mysql sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' > /data/mysql/all-databases.sql
+```
+### 创建数据库
+```sql
+create database ssss;
+```
+### 创建表
+执行initdb.sql
+### 启动部署
+### 设置环境变量
+将配需要的配置的环境变量写入到env.sh
+### 编译
+需要go环境变量的支持
+```sql
+sh ./buildprod.sh
+```
+## 启动
 ```bash
-sh ./build.sh
-sh ./deply.sh
+sh ./deploy.sh
+```
+> 单独部署前端
+```bash
+sh ./deployFE.sh
 ```
