@@ -33,7 +33,7 @@ daocloud.io/library/mysql:latest \
 ```shell
 docker run -d  -p 3306:3306 \
 --restart=always --name mysql \
--e MYSQL_ROOT_PASSWORD=root \
+-e MYSQL_ROOT_PASSWORD=password \
 -e LANG=C.UTF-8 \
 -v /home/vaniot/dev/dockerdata/mysql/data:/var/lib/mysql \
 -v /home/vaniot/dev/dockerdata/mysql/conf:/etc/mysql/ \
@@ -44,7 +44,7 @@ daocloud.io/library/mysql:8.0\
 
 docker run -d  -p 3307:3306 \
 --restart=always --name mysqls \
--e MYSQL_ROOT_PASSWORD=root \
+-e MYSQL_ROOT_PASSWORD=password \
 -e LANG=C.UTF-8 \
 mysql \
 --character-set-server=utf8  \
