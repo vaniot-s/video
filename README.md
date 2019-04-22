@@ -1,46 +1,3 @@
->[video](https://coding.imooc.com/lesson/227.html)
-
-[![Build Status](https://travis-ci.com/vaniot-s/video.svg?branch=master)](https://travis-ci.com/vaniot-s/video)
-
-命令
----
-build
-
-- 跨平台编译 `env GOOS=linux GOARCH=amd64  go build`
-
-install
-
-- 将编译后的文件打包成库放在pkg
-
-get
-
-- 获取package
-
-fmt
-
-clean
-
-doc
-
-env
-
-bug
-
-fix
-
-generate
-
-list
-
-run
-
-test
-
-tool
-
-version
-
-vet
 
 ## docker-mysql
 
@@ -164,24 +121,8 @@ video
 |__duildprod.sh # 将各个部分服务编译并复制到bin
 |__deploy.sh # 启动服务
 ```
-
-api流程:
-
-handlers->validation{1.request,2.user}->business logic(data )->response
-
-- handler:
-  - apidefs.go 数据结构
-  - errs.go error handler
-
-scheduler(任务调度):处理异步任务
- 
- - RESTful的HTTP server 
- - Timer(定时器)
- - 生产/消费者模型下的task runner(任务的读取)
-## api设计
-
-### 用户
-
+## web前端相关
+### api用户
 - 创建用户 /user post 201 400 500
 - 用户登录 /user/:usename post 200 4000 500
 - 获取用户的登录信息: /user/:username get 200 400 401 403 500
@@ -192,56 +133,13 @@ scheduler(任务调度):处理异步任务
 - 评论列表 /videos/:vid-id/comments GET 200 400 500
 - 发布评论 /videos/:vid-id/comments POST 201 400 500
 - 删除评论 /videos/:vid-id/comment/:comment-id delete 204 400 401 403 500
+## streamserver获取video
+- 
 ## scheduler
-delete video
- api->videoid-mysql->dispatcher->mysql-videoid->datachannel->executor->datachannel-videoid->delete videos
- 
- 
-代理模式
-  - api 
-  - proxy:
-# 云
-### 云原生
-特性:
- -松耦架构哦(SOA/Microservice)
- -无状态(stableless),伸缩性(Scalability),(Redundancy)冗余性
- - 平台无关性
-##部署发布
- - 自动部署
- - 良好的迁移性
- - 多云共生
- 
-TODO:
- - [ ] 部署类
-   - [ ] 一期:
-     - [ ] 配置文件
-         - yml
-     - [ ] docker
-     - [ ] CI/CD
- - [ ] 功能类
-   - [ ] 一期:
-     - 视频
-       - [ ] 弹幕
-       - [ ] 正在观看
-       - [ ] 收藏
-       - [ ] logo
-     - [ ] 关注关系
-     - [ ] 分片上传
-     - [ ] login
-        - sso
-        - jwt
-        - oauth
-        - email
-        - mobile phone
-     - [ ] 站内信
-     
- - [ ] 二期:
-   - [ ] 推荐系统
-   - [ ] 负载均衡
- - [ ] 模块
-   - [ ] 一期:
-     - [ ] admin 
-     - [ ] 监控系统
-        - grafna
-        - snetry 
-   - [ ] 二期:
+
+
+## 运行
+```bash
+sh ./build.sh
+sh ./deply.sh
+```
