@@ -1,4 +1,4 @@
-[预览](http://149.28.163.233:9006)
+[预览](http://video.vaniot.net/)
 
 文件目录
 ---
@@ -143,6 +143,7 @@ USERNAME="user"
 PASSWORD="passwordt"
 PORT="3306"
 DATABASE="database"
+STORAGETYPE="OSS"
 OSSURL="http://perewrwerb.bkt.clouddn.com/"
 echo "设置数据类型"
 if [ -n $DRIVERNAME ]
@@ -204,6 +205,16 @@ then
     else
     export DATABASE
     echo $DATABASE
+fi
+
+echo "设置设置存储类型"
+if [ -n $OSS ]
+then
+    echo "已经设置过OSS,请检查"
+      echo $OSS
+    else
+    export OSS
+    echo $OSS
 fi
 
 echo "设置OSSURL"

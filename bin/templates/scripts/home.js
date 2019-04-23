@@ -90,7 +90,7 @@ function getCookie(cname) {
 function registerUser(callback) {
     var username = $("#username").val();
     var pwd = $("#pwd").val();
-    var apiUrl = window.location.hostname + ':9006/api';
+    var apiUrl = window.location.hostname + '/api';
 
     if (username == '' || pwd == '') {
         callback(null, err);
