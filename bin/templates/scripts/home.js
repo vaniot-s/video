@@ -111,7 +111,7 @@ function registerUser(callback) {
 
 
     $.ajax({
-        url  : 'http://' + window.location.hostname + ':9006/api',
+        url  : 'http://' + window.location.hostname + '/api',
         type : 'post',
         data : JSON.stringify(dat),
         statusCode: {
@@ -139,7 +139,7 @@ function registerUser(callback) {
 function signinUser(callback) {
     var username = $("#susername").val();
     var pwd = $("#spwd").val();
-    var apiUrl = window.location.hostname + ':9006/api';
+    var apiUrl = window.location.hostname + '/api';
 
     if (username == '' || pwd == '') {
         callback(null, err);
@@ -157,7 +157,7 @@ function signinUser(callback) {
     };
 
     $.ajax({
-        url  : 'http://' + window.location.hostname + ':9006/api',
+        url  : 'http://' + window.location.hostname + '/api',
         type : 'post',
         data : JSON.stringify(dat),
         statusCode: {
