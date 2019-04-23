@@ -90,7 +90,7 @@ $(document).ready(function () {
             formData.append('file', $('#inputFile')[0].files[0]);
 
             $.ajax({
-                url: 'http://' + window.location.hostname + ':9006/upload/' + obj['id'],
+                url: 'http://' + window.location.hostname + '/upload/' + obj['id'],
                 type: 'POST',
                 data: formData,
                 //headers: {'Access-Control-Allow-Origin': 'http://127.0.0.1:9000'},
@@ -131,7 +131,7 @@ $(document).ready(function () {
 
     //
     $(".video-item").click(function () {
-        var url = 'http://' + window.location.hostname + ':9006/videos/' + this.id
+        var url = 'http://' + window.location.hostname + '/videos/' + this.id
         new DPlayer({
             container: document.getElementById('dplayer'),
             screenshot: true,
@@ -196,7 +196,7 @@ function getCookie(cname) {
 
 // DOM operations
 function selectVideo(vid) {
-    var url = 'http://' + window.location.hostname + ':9006/videos/' + vid
+    var url = 'http://' + window.location.hostname + '/videos/' + vid
     $("#curr-video-name").text(currentVideo['name']);
     new DPlayer({
         container: document.getElementById('dplayer'),
@@ -335,7 +335,7 @@ function getUserId(callback) {
     };
 
     $.ajax({
-        url: 'http://' + window.location.hostname + ':9006/api',
+        url: 'http://' + window.location.hostname + '/api',
         type: 'post',
         data: JSON.stringify(dat),
         headers: {'X-Session-Id': session},
@@ -369,7 +369,7 @@ function createVideo(vname, callback) {
     };
 
     $.ajax({
-        url: 'http://' + window.location.hostname + ':9006/api',
+        url: 'http://' + window.location.hostname + '/api',
         type: 'post',
         data: JSON.stringify(dat),
         headers: {'X-Session-Id': session},
@@ -401,7 +401,7 @@ function listAllVideos(callback) {
     };
 
     $.ajax({
-        url: 'http://' + window.location.hostname + ':9006/api',
+        url: 'http://' + window.location.hostname + '/api',
         type: 'post',
         data: JSON.stringify(dat),
         headers: {'X-Session-Id': session},
@@ -433,7 +433,7 @@ function deleteVideo(vid, callback) {
     };
 
     $.ajax({
-        url: 'http://' + window.location.hostname + ':9006/api',
+        url: 'http://' + window.location.hostname + '/api',
         type: 'post',
         data: JSON.stringify(dat),
         headers: {'X-Session-Id': session},
@@ -472,7 +472,7 @@ function postComment(vid, content, callback) {
     };
 
     $.ajax({
-        url: 'http://' + window.location.hostname + ':9006/api',
+        url: 'http://' + window.location.hostname + '/api',
         type: 'post',
         data: JSON.stringify(dat),
         headers: {'X-Session-Id': session},
@@ -504,7 +504,7 @@ function listAllComments(vid, callback) {
     };
 
     $.ajax({
-        url: 'http://' + window.location.hostname + ':9006/api',
+        url: 'http://' + window.location.hostname + '/api',
         type: 'post',
         data: JSON.stringify(dat),
         headers: {'X-Session-Id': session},
